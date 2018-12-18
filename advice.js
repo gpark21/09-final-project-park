@@ -3,31 +3,31 @@ var setup = document.getElementById("stupid")
 var hasClicked = false;
 
 document.getElementById("getAdvice").addEventListener("click", function(event) {
-  event.preventDefault();
-  if (hasClicked) {
-    setup.removeChild(setup.lastChild);
-  }
-  var boop = new XMLHttpRequest();
-  boop.onreadystatechange = function() {
-    if (this.readyState == 4  && this.status == 200) {
-      showAdvice(JSON.parse(this.responseText));
-    }
-    else if (this.readyState == 4) {
-      console.log(this.responseText);
-    }
-  };
-  boop.open("GET", "https://api.adviceslip.com/advice", true);
-  boop.send();
+	event.preventDefault();
+	if(hasClicked) {
+		setup.removeChild(setup.lastChild);
+	}
+	var boop = new XMLHttpRequest();
+	boop.onreadystatechange = function() {
+		if(this.readyState == 4 && this.status == 200) {
+			showAdvice(JSON.parse(this.responseText));
+		}
+		else if(this.readyState == 4) {
+			console.log(this.responseText);
+		}
+	};
+	boop.open("GET", "https://api.adviceslip.com/advice", true);
+	boop.send();
 });
 
 function showAdvice(line) {
-  console.log(line);
-  var slip = document.createElement("div");
-  slip.classList.add("stuff");
-  slip.classList += " slip";
-  slip.innerHTML = line.slip.advice;
-  setup.appendChild(slip);
-  hasClicked = true;
+	console.log(line);
+	var slip = document.createElement("div");
+	slip.classList.add("stuff");
+	slip.classList += " slip";
+	slip.innerHTML = line.slip.advice;
+	setup.appendChild(slip);
+	hasClicked = true;
 }
 
 // document.getElementById("language").addEventListener("submit", function(event) {

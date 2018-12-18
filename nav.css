@@ -1,0 +1,287 @@
+body {
+	margin: 0px;
+	padding: 0px;
+  background: #f9f9f9;
+  overflow-y: hidden;
+	font-family: 'Montserrat', Trebuchet MS, sans-serif;
+}
+
+header {
+  text-align: center;
+	top: 0px;
+	height: 180px;
+	width: 100%;
+	background-color: #34ACB2;
+	margin: 0px;
+}
+
+nav {
+	position: relative;
+	margin-top: 30px;
+}
+
+#name {
+	font-family: 'Major Mono Display';
+	font-size: 50px;
+	display: inline;
+	position: relative;
+	top: 50px;
+	color: #fff;
+}
+
+ul {
+	list-style-type: none;
+	margin-top: 90px;
+	padding: 0px;
+}
+
+ul li {
+	display: inline;
+	font-family: 'Nunito', sans-serif;
+	text-decoration: none;
+}
+
+ul li a {
+	display: inline;
+	padding: 0 4vw;
+	font-size: 18px;
+	color: #E2FEFF;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+ul li a:hover {
+	transition: 0.3s;
+	color: #34ACB2;
+}
+
+.subtitle {
+	font-family: 'Nunito', sans-serif;
+	font-size: 12px;
+  padding-bottom: 5em !important;
+  text-transform: lowercase;
+}
+
+a:hover, .top .title {
+	color: #6cc0f1;
+}
+
+::-webkit-scrollbar, ::-webkit-scrollbar-thumb:vertical, a:before, a:after, #s-m-t-tooltip {
+	background: #6cc0f1;
+}
+
+input {
+	background: #f9f9f9;
+}
+
+a, #inTitle, .fuzzy-search, .search, .subtitle {
+	color: #919191;
+}
+
+#filter,
+.credit a {
+	border: 1px solid #e3e3e3;
+}
+
+#filter,
+.credit a {
+	background: #fff;
+}
+
+::-webkit-scrollbar {
+	border: 2px solid #fff;
+}
+
+*,
+*:hover,
+*:before,
+*:hover:before,
+*:after,
+*:hover:after {
+	transition: all 0.4s ease-in-out;
+	-webkit-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-mt-transition: all 0.4s ease-in-out;
+}
+
+#s-m-t-tooltip {
+	margin-top: 20px;
+	margin-left: 16px;
+	padding: 6px;
+	color: #fff;
+	display: inline-block;
+	text-align: center;
+	position: absolute;
+	font-size: 8px;
+	font-family: Trebuchet MS;
+	text-transform: uppercase;
+	z-index: 9999999999;
+	letter-spacing: 1px;
+	font-weight: bold;
+}
+
+a {
+	text-decoration: none;
+	display: inline-block;
+	margin: 0px 4px;
+	padding: 3px 0px;
+}
+
+.links a {
+	width: 32px;
+}
+
+ol li a:before, ol li a:after {
+	width: 0;
+	height: 1px;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0px auto;
+	content: '';
+	z-index: 10;
+}
+
+ol li a:after {
+	margin-top: 19px;
+}
+
+ol li a:hover:before,
+ol li a:hover:after {
+	width: 100%;
+}
+
+.links a:hover:before,
+.links a:hover:after {
+	width: 32px;
+}
+
+.links {
+	width: 500px;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto auto;
+	height: 18px;
+	text-align: center;
+	padding-top: 510px;
+	z-index: 1;
+}
+
+#filter {
+	width: 525px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto auto;
+	height: 400px;
+	padding: 60px 28px 0px 30px;
+	z-index: 2;
+}
+
+.top {
+	width: 525px;
+	height: 20px;
+	display: block;
+}
+
+#outTitle {
+  position: absolute;
+	font: bold 28px 'Montserrat', Trebuchet MS, sans-serif;
+	text-transform: uppercase;
+	margin-left: 30px;
+  /* margin-top: 1em; */
+}
+
+input {
+	border: none;
+	padding: 6px;
+	font-size: 10px;
+	letter-spacing: 1px;
+	font-family: 'Montserrat', Trebuchet MS, sans-serif;
+	width: 136px;
+}
+
+input:focus {
+	outline: none;
+}
+
+.fuzzy-search,
+.search {
+	outline: none;
+	padding: 5px 8px;
+	position: absolute;
+	letter-spacing: 1px;
+	width: 124px;
+	z-index: 99999;
+	border-radius: 0px;
+	margin-left: 353px;
+}
+
+::-webkit-input-placeholder {
+	color: #bbb;
+}
+
+::-moz-placeholder {
+	color: #bbb;
+}
+
+::-moz-placeholder {
+	color: #bbb;
+}
+
+::-ms-input-placeholder {
+	color: #bbb;
+}
+
+.container {
+	margin: auto;
+	width: 400px;
+	height: 350px;
+	padding-left: 15px;
+	overflow: hidden;
+	padding-right: 20px;
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+	width: 5px;
+}
+
+.list {
+  text-align: center;
+	margin: 1em 0 0 0;
+	padding: 0;
+	z-index: 9;
+}
+
+ol li {
+	display: inline-block;
+  font-size: 15px;
+  padding: 0 0.5em;
+}
+
+.tagslist {
+	display: none;
+}
+
+.cont {
+  margin-top: 1.4em; 
+}
+
+#inTitle {
+  margin: 1.5em 0 0.5em 0;
+  text-align: center;
+	text-transform: lowercase;
+	letter-spacing: 1px;
+	display: block;
+	font: bold 17px 'Montserrat', Trebuchet MS, sans-serif;
+  width: 24em;
+}

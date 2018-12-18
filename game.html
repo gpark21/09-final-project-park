@@ -1,43 +1,46 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial scale=1.0">
-  <link rel="shortcut icon" href="">
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-  <link href='https://fonts.googleapis.com/css?family=Major+Mono+Display|Nunito|Economica' rel='stylesheet' type='text/css'>
-  <title>Vidya Games</title>
-  <link rel="shortcut icon" href="">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial scale=1.0">
+	<link rel="shortcut icon" href="">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link href='https://fonts.googleapis.com/css?family=Major+Mono+Display|Nunito|Economica' rel='stylesheet' type='text/css'>
+	<title>Vidya Games</title>
+	<link rel="shortcut icon" href="">
 </head>
+
 <body>
-  <header>
-    <h1 id="name">Grace Park</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">home</a></li>
-        <li><a href="game.html">games</a></li>
-        <li><a href="advice.html">advice</a></li>
-      </ul>
-    </nav>
-  </header>
-  <span id="load"></span>
+	<header>
+		<h1 id="name">Grace Park</h1>
+		<nav>
+			<ul>
+				<li><a href="index.html">home</a></li>
+				<li><a href="game.html">games</a></li>
+				<li><a href="advice.html">advice</a></li>
+				<li><a href="nav.html">nerd nav?</a></li>
+			</ul>
+		</nav>
+	</header>
+	<span id="load"></span>
 	<div id="side">
 		<img src="gameboy.png">
 		<div id="desc">
 			<h1>Game List</h1>
-			Get the list of a few game series (three at the moment) by picking from the dropdown below. (It may take a second for the list to load, so please be patient.)
+			Get the list of a few game series (four at the moment) by picking from the dropdown below. (It may take a second for the list to load, so please be patient.)
 			<p><select id="gameOptions">
-            <option value="blank">Select game...</option>
-            <option value="loz">Legend of Zelda</option>
-            <option value="kirby">Kirby</option>
-            <option value="pokemon">Pokemon</option>
-        </select>
-			<p><a id="submit">Select</a>
-      <p><a id="delete">Clear</a>
+					<option value="blank">Select game...</option>
+					<option value="loz">Legend of Zelda</option>
+					<option value="kirby">Kirby</option>
+					<option value="pokemon">Pokemon</option>
+					<option value="aa">Ace Attorney</option>
+				</select>
+				<p><a id="submit">Select</a>
+					<p><a id="delete">Clear</a>
 		</div>
 	</div>
 	<div id="container">
 	</div>
-  <script src="script.js"></script>
+	<script src="script.js"></script>
 </body>

@@ -42,6 +42,9 @@ document.getElementById("submit").addEventListener("click", function(event) {
   else if (selected.selectedIndex === 3) {
     picked = "60";
   }
+	else if (selected.selectedIndex === 4) {
+		picked = "1163"; 
+	}
   xml.open("GET", "https://cors-anywhere.herokuapp.com/https://api-2445582011268.apicast.io/franchises/"+ picked, true);
   xml.setRequestHeader("user-key", igdbKey);
   xml.setRequestHeader("Accept", "application/json");
