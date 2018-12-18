@@ -1,7 +1,6 @@
 var igdbKey = "2061d50fbee7ccc80daa756697d49b34";
-var clickedGame = [];
-var data;
-
+var hasDone = false;
+var load = document.getElementById("load");
 // var listRequest = new XMLHttpRequest();
 // listRequest.onreadystatechange = function() {
 //   if (this.readyState == 4 && this.status == 200) {
@@ -21,38 +20,43 @@ var selected = document.getElementById("gameOptions");
 var picked = "";
 document.getElementById("submit").addEventListener("click", function(event) {
   event.preventDefault();
+  if (hasDone) {
+    deleteList();
+    hasDone = false;
+  }
   var xml = new XMLHttpRequest();
   xml.onreadystatechange = function() {
     if (this.readyState == 4  && this.status == 200) {
-      this.clickedGame = JSON.parse(this.responseText)[0].games;
-      getGames(clickedGame);
-      // addGames(data);
+      getGames(JSON.parse(this.responseText)[0].games);
     }
     else if (this.readyState == 4) {
       console.log(this.responseText);
     }
   };
   if (selected.selectedIndex === 1) {
-    picked = "https://cors-anywhere.herokuapp.com/https://api-2445582011268.apicast.io/franchises/596";
+    picked = "596";
   }
   else if (selected.selectedIndex === 2) {
-    picked = "https://cors-anywhere.herokuapp.com/https://api-2445582011268.apicast.io/franchises/789";
+    picked = "789";
   }
-  xml.open("GET", picked, true);
+  else if (selected.selectedIndex === 3) {
+    picked = "60";
+  }
+  xml.open("GET", "https://cors-anywhere.herokuapp.com/https://api-2445582011268.apicast.io/franchises/"+ picked, true);
   xml.setRequestHeader("user-key", igdbKey);
   xml.setRequestHeader("Accept", "application/json");
   xml.send();
+  loaded = true;
 });
 
 function getGames(series) {
-  var index = i;
-   if (index != series.length){
-    var url ="https://cors-anywhere.herokuapp.com/https://api-2445582011268.apicast.io/games/"+series[index];
+  for (var i = 0; i < series.length; i++) {
+    var url ="https://cors-anywhere.herokuapp.com/https://api-2445582011268.apicast.io/games/"+series[i];
     var createRequest = new XMLHttpRequest();
     createRequest.open("GET", url);
     createRequest.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-          console.log(JSON.parse(this.responseText[0]));
+          addGames(JSON.parse(this.responseText)[0]);
         }
         else if (this.readyState == 4) {
           console.log(this.responseText);
@@ -62,29 +66,35 @@ function getGames(series) {
     createRequest.setRequestHeader("Accept", "application/json");
     createRequest.send();
   }
+  hasDone = true;
 }
 
-function addGames(gameInfo, loc) {
-      console.log("in loop");
+document.getElementById("delete").addEventListener("click", function(event) {
+  event.preventDefault();
+  deleteList();
+});
+
+function addGames(gameInfo) {
       var added = document.createElement("div");
       added.classList.add("game");
-      console.log("adding new thing");
       var addedInfo = document.createElement("div");
       addedInfo.classList.add("info");
-      addedInfo.innerHTML ="<h1> »" + gameInfo.name +"</h1><br><b>Summary:</b> " + gameInfo.summary +"<br><b>Released:</b> " + gameInfo.first_release_date;
+      addedInfo.innerHTML ="<h1>" + gameInfo.name +"</h1><br><b>Summary:</b> " + gameInfo.summary;
       added.appendChild(addedInfo);
-      console.log("more info");
-    // var image = document.createElement("img");
-    // image.classList.add('src="');
-    // image.classList += gameInfo.cover.url;
-    // image.classList += '"';
-    // added.appendChild(image);
+      var image = document.createElement("IMG");
+      document.createElement("IMG");
+      image.setAttribute("src", "http:" + gameInfo.cover.url);
+      added.appendChild(image);
       var addedTitle = document.createElement("div");
       addedTitle.classList.add("title");
       addedTitle.innerHTML = '<h1><a href="' + gameInfo.url + '">' + gameInfo.name + '</a></h1>';
       added.appendChild(addedTitle);
       document.getElementById("container").appendChild(added);
-      console.log("did it") ;
-      loc++;
-      getGames(clickedGame, loc);
+}
+
+function deleteList() {
+    var oldList = document.getElementById("container");
+    while (oldList.hasChildNodes()) {
+      oldList.removeChild(oldList.firstChild);
+    }
 }
