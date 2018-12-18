@@ -63,13 +63,27 @@ main {
 }
 
 #intro {
-  padding-top: 1.5em;
-  margin-left: -5em; 
+  margin-left: -5em;
   text-align: left;
-  font-family: 'Nunito', sans-serif;
-  font-size: 15px;
   display: inline-block;
   width: 32em;
+  padding-top: 1.5em;
+}
+
+#intro, .stuff {
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+}
+
+.stuff {
+  padding-top: 5em;
+  text-align: center;
+}
+
+.slip {
+  padding-top: 3em; 
+  font-size: 20px;
+  font-style: italic;
 }
 
 .column{
@@ -95,6 +109,26 @@ footer {
   bottom: 0;
   padding: 2em 0em;
   background-color: rgba(52, 172, 178, 0.3);
+}
+
+.button, .button:link, .button:visited {
+  transition: 0.3s;
+  color: #fff;
+  display:inline-block;
+  padding: 0.3em 1.2em;
+  border: none;
+  background-color: #34ACB2;
+  border-radius: 2vh;
+  font-size: 1.1em;
+  width: auto;
+}
+
+.button:hover, .button:active {
+  text-decoration: none;
+  background: #fff;
+  color: #0174CD;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
 /*game.html stuff?*/
@@ -166,7 +200,7 @@ footer {
   position: absolute;
   margin-left: 15em;
   width: 80%;
-  top: 15em;
+  top: 10em;
 }
 
 .game {
