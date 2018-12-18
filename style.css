@@ -18,7 +18,7 @@ nav {
 }
 
 #name{
-  font-family:'Major Mono Display',open sans;
+  font-family:'Major Mono Display';
   font-size: 50px;
   display: inline;
   position: relative;
@@ -114,7 +114,7 @@ main {
 #side {
   position: fixed;
   margin-left: 80px;
-  top: 100px;
+  top: 14em;
   z-index: 99;
 }
 
@@ -150,7 +150,6 @@ main {
 
 #desc a {
   color: #f09b26;
-  /*THIS IS THE RETURN LINK COLOR*/
   text-decoration: none;
   font-size: 9px;
   letter-spacing: 1px;
@@ -160,12 +159,12 @@ main {
 
 #container {
   position: absolute;
-  margin-left: 140px;
-  width: 1000px;
-  top: 20px;
+  margin-left: 15em;
+  width: 65%;
+  top: 15em;
 }
 
-.char {
+.game {
   position: relative;
   float: left;
   width: 260px;
@@ -174,17 +173,17 @@ main {
   padding: 4px;
 }
 
-.char a {
+.game a {
   color: #000;
   text-decoration: none;
 }
 
-.char a:hover {
+.game a:hover {
   color: ffdd11;
 }
 
-.char img {
-  width: 150px;
+.game img {
+  width: 200px;
   padding: 4px;
   border: 1px solid #ccc;
 }
@@ -200,8 +199,8 @@ main {
   font-weight: normal;
   letter-spacing: 2px;
   z-index: 99;
-  width: 175px;
-  margin-left: 3.4em;
+  width: 17.3em;
+  margin-left: 2em;
   text-align: center;
   text-transform: uppercase;
   padding: 2px;
@@ -214,7 +213,7 @@ main {
   font-family: tahoma;
   font-size: 10px;
   width: 200px;
-  margin-left: 180px;
+  margin-left: 23.5em;
   padding: 10px;
   border: 5px solid #eee;
   color: #999;

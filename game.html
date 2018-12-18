@@ -1,77 +1,44 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<!--credit to http://zuvia.tumblr.com/ for base code-->
-<title>{Title}</title>
-<link rel="shortcut icon" href="{Favicon}">
 <head>
   <link rel="stylesheet" type="text/css" href="style.css">
-  <link href='http://fonts.googleapis.com/css?family=Economica' rel='stylesheet' type='text/css'>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-	<script src="http://static.tumblr.com/6hsqxdt/QBym35odk/jquery.masonry.js"></script>
-	<script>
-	$(function() {
-		var $container = $('#container');
-		$container.imagesLoaded(function() {
-			$container.masonry({
-				itemSelector: '.char',
-			});
-		});
-		$container.infinitescroll({
-				itemSelector: ".char",
-				loadingImg: "",
-				loadingText: "<em></em>",
-				bufferPx: 10000,
-				extraScrollPx: 12000,
-			},
-			// trigger Masonry as a callback
-			function(newElements) {
-				var $newElems = $(newElements).css({
-					opacity: 0
-				});
-				// ensure that images load before adding to masonry layout
-				$newElems.imagesLoaded(function() {
-					$newElems.animate({
-						opacity: 1
-					});
-					$container.masonry('appended', $newElems, true);
-				});
-			}
-		);
-	});
-	</script>
+  <link href='http://fonts.googleapis.com/css?family=Economica|Major+Mono+Display|Nunito' rel='stylesheet' type='text/css'>
+  <title>Vidya Games</title>
+  <link rel="shortcut icon" href="">
 </head>
 <body>
+  <header>
+    <h1 id="name">Grace Park</h1>
+    <nav>
+      <ul>
+        <li><a href="/">home</a></li>
+        <li><a href="/game.html">games</a></li>
+      </ul>
+    </nav>
+  </header>
 	<div id="side">
-		<img src="http://static.tumblr.com/jtqlgf2/wjzm41kby/la.png">
+		<img src="gameboy.png">
 		<div id="desc">
 			<h1>hm</h1>
 			Figuring something out.
-			<p>
-				<a href="/">return</a>
+			<p><select id="gameOptions">
+            <option value="blank">Select game...</option>
+            <option value="loz">Legend of Zelda</option>
+            <option value="ssb">Kirby</option>
+        </select>
+			<p><a id="submit">Select</a>
 		</div>
 	</div>
 	<div id="container">
 		<!-- START -->
-		<div class="char">
+		<div class="game">
 			<div class="info">
-				<h1>» Katniss Everdeen</h1>
-				<b>Status:</b> Hiatus <br>
-				<b>Age:</b> 16 <br>
-			</div>
-			<img src="http://24.media.tumblr.com/tumblr_m2hbvtS2U51rtgrp9o1_500.jpg">
-			<div class="title">
-				<h1>
-					<a href="ROLE PLAY URL HERE">The Hunger Games</a>
-				</h1>
-			</div>
-		</div>
-		<!-- End -->
-    <!-- START -->
-		<div class="char">
-			<div class="info">
-				<h1>» Katniss Everdeen</h1>
-				<b>Status:</b> Hiatus <br>
-				<b>Age:</b> 16 <br>
+				<h1>» Title</h1>
+				<b>Created:</b>  <br>
+				<b>Summary:</b> <br>
+        <b>Time to beat:</b> <br>
+        <b>Genres:</b> <br>
+        <b>ESRB:</b>
 			</div>
 			<img src="http://24.media.tumblr.com/tumblr_m2hbvtS2U51rtgrp9o1_500.jpg">
 			<div class="title">
@@ -82,4 +49,5 @@
 		</div>
 		<!-- End -->
 	</div>
+  <script src="script.js"></script>
 </body>
