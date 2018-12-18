@@ -57,9 +57,15 @@ main {
 }
 
 #icon {
+	transition: 0.3s; 
 	width: 25%;
 	display: inline-block;
 	margin-left: 20%;
+}
+
+#icon:hover {
+	transition: 0.3s;
+	opacity: 0.5;
 }
 
 #intro {
