@@ -53,22 +53,23 @@ li a:hover {
 }
 
 main {
-  width: 50%;
   margin: auto;
 }
 
 #icon {
   width: 25%;
   display: inline-block;
+  margin-left: 20%;
 }
 
 #intro {
-  padding: 1.5em 0 0 2.5em;
+  padding-top: 1.5em;
+  margin-left: -5em; 
   text-align: left;
   font-family: 'Nunito', sans-serif;
   font-size: 15px;
   display: inline-block;
-  width: 55%;
+  width: 32em;
 }
 
 .column{
@@ -82,26 +83,23 @@ main {
     clear: both;
 }
 
-.button, .button:link, .button:visited {
-  display:inline-block;
-  padding: 1.5vh 3vw;
-  border: 0.1vw solid #7688ff;
-  background: #fefefe;
-  border-radius: 2vh;
-  font-size: 2vh;
-  width: auto;
-}
-
-.button:hover, .button:active {
-  text-decoration: none;
-  background: #efefef;
-  color: #5382fe;
-
+footer {
+  opacity: 0.9;
+  width: 100%;
+  margin: 2em 0 0 0;
+  border: 0;
+  text-align: center;
+  font-family: Geneva,Tahoma,Verdana,sans-serif;
+  font-size: 0.9em;
+  position: fixed;
+  bottom: 0;
+  padding: 2em 0em;
+  background-color: rgba(52, 172, 178, 0.3);
 }
 
 /*game.html stuff?*/
 ::-webkit-scrollbar-thumb:vertical {
-  background-color: #FA7B98;
+  background-color: #D9F9FB;
   height: 30px;
 }
 
@@ -203,7 +201,7 @@ main {
 
 .title h1:hover {
   transition: 0.3s;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
 }
 
 .title h1 {
@@ -211,7 +209,6 @@ main {
   font-family: Economica;
   font-size: 18px;
   font-weight: normal;
-  letter-spacing: 2px;
   z-index: 99;
   width: 11.5em;
   margin-left: 1.4em;
@@ -242,7 +239,7 @@ main {
   font-family: economica;
   color: #000;
   font-size: 18px;
-  margin-top: -8px;
+  margin-top: 0.2em;
   margin-bottom: 2px;
   font-weight: normal;
 }

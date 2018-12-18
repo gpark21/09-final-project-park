@@ -46,7 +46,6 @@ document.getElementById("submit").addEventListener("click", function(event) {
   xml.setRequestHeader("user-key", igdbKey);
   xml.setRequestHeader("Accept", "application/json");
   xml.send();
-  loaded = true;
 });
 
 function getGames(series) {
