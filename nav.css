@@ -273,7 +273,7 @@ ol li {
 }
 
 .cont {
-  margin-top: 1.4em; 
+  margin-top: 1.4em;
 }
 
 #inTitle {
@@ -284,4 +284,18 @@ ol li {
 	display: block;
 	font: bold 17px 'Montserrat', Trebuchet MS, sans-serif;
   width: 24em;
+}
+
+footer {
+	opacity: 0.9;
+	width: 100%;
+	margin: 2em 0 0 0;
+	border: 0;
+	text-align: center;
+	font-family: Geneva, Tahoma, Verdana, sans-serif;
+	font-size: 0.8em;
+	position: fixed;
+	bottom: 0;
+	padding: 2em 0em;
+	background-color: rgba(52, 172, 178, 0.3);
 }
