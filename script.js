@@ -1,4 +1,6 @@
 var igdbKey = "2061d50fbee7ccc80daa756697d49b34";
+var clickedGame = [];
+var data;
 
 // var listRequest = new XMLHttpRequest();
 // listRequest.onreadystatechange = function() {
@@ -22,7 +24,9 @@ document.getElementById("submit").addEventListener("click", function(event) {
   var xml = new XMLHttpRequest();
   xml.onreadystatechange = function() {
     if (this.readyState == 4  && this.status == 200) {
-      getGames(JSON.parse(this.responseText)[0].games);
+      this.clickedGame = JSON.parse(this.responseText)[0].games;
+      getGames(clickedGame);
+      // addGames(data);
     }
     else if (this.readyState == 4) {
       console.log(this.responseText);
@@ -41,14 +45,14 @@ document.getElementById("submit").addEventListener("click", function(event) {
 });
 
 function getGames(series) {
-  var stats = [];
-  for (var i = 0; i < series.length; i++) {
-    var url ="https://cors-anywhere.herokuapp.com/https://api-2445582011268.apicast.io/games/"+series[i];
+  var index = i;
+   if (index != series.length){
+    var url ="https://cors-anywhere.herokuapp.com/https://api-2445582011268.apicast.io/games/"+series[index];
     var createRequest = new XMLHttpRequest();
     createRequest.open("GET", url);
     createRequest.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-          stats.push(i, JSON.parse(this.responseText)[0]);
+          console.log(JSON.parse(this.responseText[0]));
         }
         else if (this.readyState == 4) {
           console.log(this.responseText);
@@ -58,15 +62,9 @@ function getGames(series) {
     createRequest.setRequestHeader("Accept", "application/json");
     createRequest.send();
   }
-  console.log("going to add");
-  addGames(stats);
 }
 
-function addGames(gameInfo) {
-  console.log("adding");
-  console.log(gameInfo[1]); 
-  for (var x = 0; x < gameInfo.length; x++) {
-    if (gameInfo[x] != gameInfo.length/2) {
+function addGames(gameInfo, loc) {
       console.log("in loop");
       var added = document.createElement("div");
       added.classList.add("game");
@@ -87,6 +85,6 @@ function addGames(gameInfo) {
       added.appendChild(addedTitle);
       document.getElementById("container").appendChild(added);
       console.log("did it") ;
-    }
-  }
+      loc++;
+      getGames(clickedGame, loc);
 }
