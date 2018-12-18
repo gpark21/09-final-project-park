@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--credit to http://zuvia.tumblr.com/ for base code-->
+<title>{Title}</title>
+<link rel="shortcut icon" href="{Favicon}">
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href='http://fonts.googleapis.com/css?family=Economica' rel='stylesheet' type='text/css'>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+	<script src="http://static.tumblr.com/6hsqxdt/QBym35odk/jquery.masonry.js"></script>
+	<script>
+	$(function() {
+		var $container = $('#container');
+		$container.imagesLoaded(function() {
+			$container.masonry({
+				itemSelector: '.char',
+			});
+		});
+		$container.infinitescroll({
+				itemSelector: ".char",
+				loadingImg: "",
+				loadingText: "<em></em>",
+				bufferPx: 10000,
+				extraScrollPx: 12000,
+			},
+			// trigger Masonry as a callback
+			function(newElements) {
+				var $newElems = $(newElements).css({
+					opacity: 0
+				});
+				// ensure that images load before adding to masonry layout
+				$newElems.imagesLoaded(function() {
+					$newElems.animate({
+						opacity: 1
+					});
+					$container.masonry('appended', $newElems, true);
+				});
+			}
+		);
+	});
+	</script>
+</head>
+<body>
+	<div id="side">
+		<img src="http://static.tumblr.com/jtqlgf2/wjzm41kby/la.png">
+		<div id="desc">
+			<h1>hm</h1>
+			Figuring something out.
+			<p>
+				<a href="/">return</a>
+		</div>
+	</div>
+	<div id="container">
+		<!-- START -->
+		<div class="char">
+			<div class="info">
+				<h1>» Katniss Everdeen</h1>
+				<b>Status:</b> Hiatus <br>
+				<b>Age:</b> 16 <br>
+			</div>
+			<img src="http://24.media.tumblr.com/tumblr_m2hbvtS2U51rtgrp9o1_500.jpg">
+			<div class="title">
+				<h1>
+					<a href="ROLE PLAY URL HERE">The Hunger Games</a>
+				</h1>
+			</div>
+		</div>
+		<!-- End -->
+    <!-- START -->
+		<div class="char">
+			<div class="info">
+				<h1>» Katniss Everdeen</h1>
+				<b>Status:</b> Hiatus <br>
+				<b>Age:</b> 16 <br>
+			</div>
+			<img src="http://24.media.tumblr.com/tumblr_m2hbvtS2U51rtgrp9o1_500.jpg">
+			<div class="title">
+				<h1>
+					<a href="ROLE PLAY URL HERE">The Hunger Games</a>
+				</h1>
+			</div>
+		</div>
+		<!-- End -->
+	</div>
+</body>

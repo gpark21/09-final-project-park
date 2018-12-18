@@ -1,0 +1,238 @@
+body{
+  margin:0px;
+  padding:0px;
+  text-align: center;
+}
+
+header {
+  top:0px;
+  height: 180px;
+  width: 100%;
+  background-color: #34ACB2;
+  margin:0px;
+}
+
+nav {
+  position: relative;
+  margin-top: 30px;
+}
+
+#name{
+  font-family:'Major Mono Display',open sans;
+  font-size: 50px;
+  display: inline;
+  position: relative;
+  top: 50px;
+  color: #fff;
+}
+
+ul{
+  list-style-type: none;
+  margin-top: 90px;
+  padding: 0px;
+}
+
+li {
+  display: inline;
+  font-family: 'Nunito',sans-serif;
+  text-decoration: none;
+}
+
+li a {
+  display: inline;
+  padding: 0 4vw;
+  font-size: 18px;
+  color: #E2FEFF;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+li a:hover {
+  transition: 0.3s;
+  color: #34ACB2;
+}
+
+main {
+  width: 50%;
+  margin: auto;
+}
+
+#icon {
+  width: 25%;
+  display: inline-block;
+}
+
+#intro {
+  padding: 1.5em 0 0 2.5em;
+  text-align: left;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  display: inline-block;
+  width: 55%;
+}
+
+.column{
+  float: left;
+  margin-top: 5em;
+ }
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.button, .button:link, .button:visited {
+  display:inline-block;
+  padding: 1.5vh 3vw;
+  border: 0.1vw solid #7688ff;
+  background: #fefefe;
+  border-radius: 2vh;
+  font-size: 2vh;
+  width: auto;
+}
+
+.button:hover, .button:active {
+  text-decoration: none;
+  background: #efefef;
+  color: #5382fe;
+
+}
+
+/*game.html stuff?*/
+::-webkit-scrollbar-thumb:vertical {
+  background-color: #FA7B98;
+  height: 30px;
+}
+
+::-webkit-scrollbar {
+  height: 30px;
+  width: 4px;
+  background-color: #fff;
+}
+
+#side {
+  position: fixed;
+  margin-left: 80px;
+  top: 100px;
+  z-index: 99;
+}
+
+#side img {
+  width: 150px;
+  height: 150px;
+  padding: 4px;
+  border: 1px solid #ccc;
+}
+
+#desc {
+  position: fixed;
+  width: 220px;
+  margin-top: -10px;
+  margin-left: -30px;
+  font-family: georgia;
+  font-size: 10px;
+  text-align: center;
+  color: #999;
+}
+
+#desc h1 {
+  font-family: Economica;
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  z-index: 99;
+  text-align: center;
+  border-bottom: 1px dotted;
+  text-transform: uppercase;
+  padding: 2px;
+}
+
+#desc a {
+  color: #f09b26;
+  /*THIS IS THE RETURN LINK COLOR*/
+  text-decoration: none;
+  font-size: 9px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: consolas;
+}
+
+#container {
+  position: absolute;
+  margin-left: 140px;
+  width: 1000px;
+  top: 20px;
+}
+
+.char {
+  position: relative;
+  float: left;
+  width: 260px;
+  margin-left: 180px;
+  margin-bottom: 20px;
+  padding: 4px;
+}
+
+.char a {
+  color: #000;
+  text-decoration: none;
+}
+
+.char a:hover {
+  color: ffdd11;
+}
+
+.char img {
+  width: 150px;
+  padding: 4px;
+  border: 1px solid #ccc;
+}
+
+.title {
+  position: relative;
+  margin-top: -40px;
+}
+
+.title h1 {
+  font-family: Economica;
+  font-size: 12px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  z-index: 99;
+  width: 175px;
+  margin-left: 3.4em;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 2px;
+  color: #000;
+  background-color: #ffdd11;
+}
+
+.info {
+  position: absolute;
+  font-family: tahoma;
+  font-size: 10px;
+  width: 200px;
+  margin-left: 180px;
+  padding: 10px;
+  border: 5px solid #eee;
+  color: #999;
+  background-color: #fff;
+}
+
+.info h1 {
+  border-bottom: 1px dotted;
+  font-family: economica;
+  color: #000;
+  font-size: 14px;
+  margin-top: -8px;
+  margin-bottom: 2px;
+  font-weight: normal;
+}
+
+.info b,strong {
+  color: #eeaa55;
+  text-transform: uppercase;
+  font-size: 8px;
+}
